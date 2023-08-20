@@ -5,7 +5,7 @@ ob = bpy.context.active_object
 rename = {}
 
 with open(bpy.path.abspath("//") + "mh_game_engine_to_def.csv", "r") as f:
-    for line in f.readlines():
+    for line in f.read().splitlines():
         vg_from, vg_to = line.split("\t")
         rename[vg_from] = vg_to
 
